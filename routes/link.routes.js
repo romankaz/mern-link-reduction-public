@@ -10,12 +10,11 @@ router.post('/generate', auth, async (req, res) => {
     try {
        const baseUrl = config.get('baseUrl')
        const {from} = req.body
-        
        const code = shortid.generate()
 
-       const existing = await Link.findOne({from})
-        
-       if (existing) {
+       //    const existing = await Link.findOne({from})
+       const existing = await Link.find({from: req.body.from, owner: req.user.userId})
+       if (existing && existing.length) {
            return res.json({ link: existing })
        }
 
