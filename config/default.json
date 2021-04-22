@@ -1,7 +1,3 @@
 {
-    "port": 5000,
-    "jwtSecret": "romankazarov youtube video",
-    "mongoURI": "mongodb+srv://romankaz:Mongodb1587!@cluster0.yvheg.mongodb.net/app?retryWrites=true&w=majority",
-    "baseUrl": "http://localhost:5000"
-
+    
 }
